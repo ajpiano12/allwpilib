@@ -15,7 +15,7 @@ Pose3dStamped::Pose3dStamped(Pose3d pose, units::second_t t)
 
 void frc::to_json(wpi::json& json, const Pose3dStamped& pose) {
   json = wpi::json{{"pose", pose.Pose()},
-                   {"time", pose.T()}};
+                   {"time", pose.T().value()}};
 }
 
 void frc::from_json(const wpi::json& json, Pose3dStamped& pose) {
