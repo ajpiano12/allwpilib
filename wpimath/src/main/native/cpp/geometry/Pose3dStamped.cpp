@@ -19,6 +19,6 @@ void frc::to_json(wpi::json& json, const Pose3dStamped& pose) {
 }
 
 void frc::from_json(const wpi::json& json, Pose3dStamped& pose) {
-  pose = Pose3d{json.at("pose").get<Pose3d>(),
+  pose = Pose3dStamped{json.at("pose").get<Pose3d>(),
                 units::second_t{json.at("time").get<double>()}};
 }
