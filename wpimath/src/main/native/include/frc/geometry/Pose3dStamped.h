@@ -4,6 +4,8 @@
 
 #pragma once
 
+#include <wpi/SymbolExports.h>
+
 #include "frc/geometry/Pose3d.h"
 
 #include "units/time.h"
