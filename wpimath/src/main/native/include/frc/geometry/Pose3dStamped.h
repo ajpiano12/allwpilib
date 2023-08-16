@@ -27,8 +27,7 @@ class WPILIB_DLLEXPORT Pose3dStamped {
   /**
    * Constructs a pose with a Pose3d and a time value
    */
-  Pose3dStamped(units::meter_t x, units::meter_t y, units::meter_t z,
-         Rotation3d rotation);
+  Pose3dStamped(Pose3d pose, units::second_t t);
 
   /**
    * Returns the underlying pose.
@@ -46,7 +45,7 @@ class WPILIB_DLLEXPORT Pose3dStamped {
 
  private:
   Pose3d m_pose;
-  units::second_t<long double> m_t = 0.0_s;
+  units::second_t m_t = 0.0_s;
 };
 
 WPILIB_DLLEXPORT
